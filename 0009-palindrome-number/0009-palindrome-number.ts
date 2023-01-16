@@ -4,9 +4,7 @@ function isPalindrome(x: number): boolean {
 
     for (let i: number = 0; i < (numberToArray.length / 2); i++) {
         if (numberToArray[i] !== numberToArray[numberToArray.length - 1 - i]) {
-
-            result = false
-            return result
+            return false
         }
     }
     return result
