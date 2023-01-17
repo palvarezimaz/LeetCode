@@ -1,11 +1,5 @@
 function isValid(s: string): boolean {
-    type Pairs = {
-        '}': string,
-        ']': string,
-        ')': string
-    }
-
-    const pairs: Pairs | any = {
+    const pairs: { [char: string]: string } = {
         '}': '{',
         ']': '[',
         ')': '('
