@@ -14,7 +14,7 @@ function isValid(s: string): boolean {
     const stack: string[] = []
     let matchingBrackets: boolean = true
 
-    sToArray.map(char => {
+    sToArray.forEach(char => {
         if (char === '{' || char === '[' || char === '(') {
             stack.push(char)
         } else {
