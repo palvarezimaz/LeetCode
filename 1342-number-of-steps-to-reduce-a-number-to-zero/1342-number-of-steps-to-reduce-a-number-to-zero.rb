@@ -4,7 +4,7 @@ def number_of_steps(num)
     count = 0
     num_to_reduce = num.to_i
     while num_to_reduce > 0
-        if num_to_reduce.odd? 
+        if num_to_reduce % 2 != 0  
             num_to_reduce -= 1
             count = count += 1
         else
