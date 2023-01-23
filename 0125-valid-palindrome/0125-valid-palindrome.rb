@@ -1,5 +1,6 @@
 # @param {String} s
 # @return {Boolean}
 def is_palindrome(s)
-    s.downcase.gsub(/[^0-9a-z]/i,'') == s.downcase.gsub(/[^0-9a-z]/i,'').reverse
+    to_evaluate = s.downcase.gsub(/[^0-9a-z]/i,'')
+    to_evaluate == to_evaluate.reverse
 end
