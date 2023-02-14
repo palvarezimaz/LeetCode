@@ -1,23 +1,23 @@
 class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
-        s_dic = {}
-        t_dic = {}
-        loops = len(s)
+        res_dic = {}
 
-        for char in range(loops):
-            if s[char] not in s_dic:
-                s_dic[s[char]] = t[char]
+        for char in range(len(s)):
+            if s[char] not in res_dic:
+                res_dic[s[char]] = t[char]
             else:
-                if s_dic[s[char]] == t[char]:
+                if res_dic[s[char]] == t[char]:
                     pass
                 else:
                     return False
-            if t[loops - char - 1] not in t_dic:
-                t_dic[t[loops - char - 1]] = s[loops - char - 1]
+        
+        res_dic = {}
+        for char in range(len(t)):
+            if t[char] not in res_dic:
+                res_dic[t[char]] = s[char]
             else:
-                if t_dic[t[loops - char - 1]] == s[loops - char - 1]:
+                if res_dic[t[char]] == s[char]:
                     pass
                 else:
                     return False
-
         return True
