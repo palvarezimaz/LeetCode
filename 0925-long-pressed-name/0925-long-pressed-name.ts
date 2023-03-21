@@ -6,8 +6,7 @@ function isLongPressedName(name: string, typed: string): boolean {
         return false
     }
     for (let i = 0; i < typed_len; i++) {
-        if (name_arr[i] === typed_arr[i]) {
-        } else {
+        if (name_arr[i] !== typed_arr[i]) {
             if (typed_arr[i] === typed_arr[i - 1]) {
                 typed_arr.splice(i, 1)
                 i--
